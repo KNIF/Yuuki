@@ -5,7 +5,7 @@ module.exports = {
         message.channel.send({
             embed: {
                 title: ':information_source: Info',
-                description: 'Author: `KNIF#0001`.',
+                description: '**Author:** `KNIF#0001`\n**Repo:** https://github.com/KNIF/Yuuki',
                 color: 3835585,
                 footer: {
                     text: 'Requested by ' + message.author.tag,
