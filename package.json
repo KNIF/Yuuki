@@ -1,0 +1,33 @@
+{
+  "name": "yuuki",
+  "version": "1.0.0",
+  "description": "Multipurpose Discord Bot",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KNIF/Yuuki.git"
+  },
+  "keywords": [
+    "Discord",
+    "Bot"
+  ],
+  "author": "KNIF <admin@knif.dev>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/KNIF/Yuuki/issues"
+  },
+  "homepage": "https://github.com/KNIF/Yuuki#readme",
+  "dependencies": {
+    "discord.js": "^12.1.1",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.3"
+  }
+}
