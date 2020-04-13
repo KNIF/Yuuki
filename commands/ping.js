@@ -14,7 +14,7 @@ module.exports = {
                         )}ms\``,
                         `**Uptime**: \`${msToTime(client.uptime)}\``,
                     ].join('\n'),
-                    color: 16098851,
+                    color: 3835585,
                     footer: {
                         text: 'Requested by ' + message.author.tag,
                         icon_url: message.author.displayAvatarURL,
