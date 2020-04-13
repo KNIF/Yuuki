@@ -1,6 +1,6 @@
 module.exports = {
     name: 'ping',
-    description: 'Shows the ping and uptime',
+    description: 'Shows the ping and uptime.',
     execute: async (client, message, args) => {
         let botMsg = await message.channel.send('〽️ Pinging');
 

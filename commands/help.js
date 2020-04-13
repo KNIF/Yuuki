@@ -16,7 +16,7 @@ module.exports = {
                 '`' + commands.map((command) => command.name).join(', ') + '`'
             );
             data.push(
-                `\nYou can send \`${prefix}help [command name]\` to get info on a specific command!`
+                `\nYou can send \`${prefix}help [command name]\` to get info on a specific command.`
             );
 
             return message.channel.send({
@@ -41,7 +41,7 @@ module.exports = {
         if (!command) {
             return message.channel.send({
                 embed: {
-                    description: ":warning: That's not a valid command!",
+                    description: ":warning: That's not a valid command.",
                     color: 16763981,
                     footer: {
                         text: 'Requested by ' + message.author.tag,
@@ -52,7 +52,7 @@ module.exports = {
             });
         }
 
-        data.push(command.name);
+        data.push(`**Name:** ${command.name}`);
 
         if (command.aliases)
             data.push(`**Aliases:** ${command.aliases.join(', ')}`);
@@ -63,8 +63,8 @@ module.exports = {
 
         message.channel.send({
             embed: {
-                title: data[0],
-                description: data.slice(1).join('\n'),
+                title: ':regional_indicator_h:elp',
+                description: data.join('\n'),
                 color: 3835585,
                 footer: {
                     text: 'Requested by ' + message.author.tag,

@@ -17,7 +17,7 @@ for (const file of commandFiles) {
 }
 
 client.on('ready', () => {
-    console.log(`Bot ${client.user.tag} (${client.user.id}) is ready`);
+    console.log(`Bot ${client.user.tag} (${client.user.id}) is ready.`);
 
     client.setInterval(() => {
         client.user
@@ -47,10 +47,10 @@ client.on('message', async (message) => {
     const command = client.commands.get(commandName);
 
     if (command.args && !args.length) {
-        let reply = `You didn't provide any arguments, ${message.author}!`;
+        let reply = `You didn't provide any arguments, ${message.author}.`;
 
         if (command.usage)
-            reply += `\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\``;
+            reply += `\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\`.`;
 
         return message.channel.send({
             embed: {

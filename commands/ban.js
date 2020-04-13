@@ -1,17 +1,17 @@
 module.exports = {
-    name: 'kick',
-    description: 'Kicks a member of the server.',
+    name: 'ban',
+    description: 'Bans a member of the server.',
     usage: '[member]',
     execute: async (client, message, args) => {
         const user = message.mentions.users.first();
         if (user) {
             const member = message.guild.member(user);
             if (member) {
-                if (!message.member.hasPermission('KICK_MEMBERS')) {
+                if (!message.member.hasPermission('BAN_MEMBERS')) {
                     return message.channel.send({
                         embed: {
                             description:
-                                ":warning: You don't have permission to kick.",
+                                ":warning: You don't have permission to ban.",
                             color: 16763981,
                             footer: {
                                 text: 'Requested by ' + message.author.tag,
@@ -23,11 +23,11 @@ module.exports = {
                 }
 
                 member
-                    .kick()
+                    .ban()
                     .then(() => {
                         return message.channel.send({
                             embed: {
-                                description: `:white_check_mark: Successfully kicked ${user.tag}.`,
+                                description: `:white_check_mark: Successfully banned ${user.tag}.`,
                                 color: 7778644,
                                 footer: {
                                     text: 'Requested by ' + message.author.tag,
@@ -67,7 +67,7 @@ module.exports = {
             return message.channel.send({
                 embed: {
                     description:
-                        ":warning: You didn't mention the user to kick.",
+                        ":warning: You didn't mention the user to ban.",
                     color: 16763981,
                     footer: {
                         text: 'Requested by ' + message.author.tag,

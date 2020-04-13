@@ -1,6 +1,6 @@
 module.exports = {
     name: 'invite',
-    description: 'Shows the invite link',
+    description: 'Shows the invite link.',
     execute: async (client, message, args) => {
         message.channel.send({
             embed: {
