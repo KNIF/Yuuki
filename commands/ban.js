@@ -1,6 +1,6 @@
 module.exports = {
     name: 'ban',
-    description: 'Bans a member of the server.',
+    description: 'Bans a member from the server.',
     usage: '[member]',
     execute: async (client, message, args) => {
         const user = message.mentions.users.first();
