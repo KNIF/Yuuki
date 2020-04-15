@@ -2,7 +2,6 @@ module.exports = {
     name: 'say',
     description: 'Says something as the bot.',
     usage: '[message]',
-    aliases: ['embed'],
     execute: async (client, message, args) => {
         message.channel.send({
             embed: {
