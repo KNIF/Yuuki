@@ -26,3 +26,4 @@ Multipurpose Discord Bot (Beta)
 - [x] Invite
 - [x] Kick
 - [x] Ping
+- [x] Say
